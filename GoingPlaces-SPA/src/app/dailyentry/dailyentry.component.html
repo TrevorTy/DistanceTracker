@@ -1,0 +1,154 @@
+<div class="container mt-5">
+  <h2 class="text-center"> Daily Distance Entry</h2>
+  <form [formGroup]="dailyEntryForm" (ngSubmit)="createDailyEntry()" class="form-inline justify-content-center">
+    
+    <!-- <div class="form-group">
+      <input type="text"
+            placeholder="Datepicker"
+            class="form-control"
+            formControlName="currentDay"
+            bsDatepicker [bsConfig]="bsConfig">
+    </div> -->
+    <div class="form-group">
+      
+      
+    <input type="number" class="form-control" step=".01" formControlName="dailyDistance"  
+    placeholder="Distance">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control"  formControlName="day"  
+      placeholder="Day">
+      </div>
+    <!-- <div class="form-group">
+    
+        <input type="text" class="form-control"  formControlName="month"  
+        placeholder="Month">
+        </div> -->
+
+        <div class="form-group">
+         
+
+        <select class="form-control"  formControlName="month" >
+          <label>Choose a month: </label>
+          <option value="january"> January</option>
+          <option value="february"> February</option>
+          <option value="march"> March</option>
+          <option value="april"> April</option>
+          <option value="may"> May</option>
+          <option value="june"> June</option>
+          <option value="july"> July</option>
+          <option value="august"> August</option>
+          <option value="september"> September</option>
+          <option value="october"> October</option>
+          <option value="november"> November</option>
+          <option value="december"> December</option>
+        </select>
+        </div>
+        
+        
+        <div class="form-group">
+          
+            <input type="number" class="form-control"  formControlName="year"  
+            placeholder="Year">
+            </div>
+            
+      <div class="form-group">
+      <!-- <button class="btn btn-success" type="submit">Register</button> -->
+      <button class="btn2 btn-lg" type="submit">Submit</button> 
+      <!-- <button class="btn btn-lg btn-outline-warning btn-block" type="button" (click)="cancel()">Cancel</button> -->
+    </div>
+  </form>
+</div>
+
+<form [formGroup]="endDestinationForm" (ngSubmit)="createEndDestination()" class="form-inline justify-content-center">
+  <div class="form-group">  
+    <input type="text" class="form-control"  formControlName="goal"  
+    placeholder="Goal Name">
+    </div>
+    <div class="form-group">
+    <input type="text" class="form-control"  formControlName="distanceOfGoal"  
+    placeholder="Distance Of Goal">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control"  formControlName="year"  
+      placeholder="Year">
+      </div>
+    <div class="form-group">
+     <button class="btn2 btn-lg btn-block" type="submit">Submit Goal</button> 
+    </div>
+</form>
+
+<div class="year">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li><span>2020</span></li>
+  </ul>
+</div>
+
+  <div class="row" >
+    <table class="table table-bordered">
+      <tr class="tablerow-headers">
+        <th>Day</th>
+        <th>Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>
+        <th>Jun</th>
+        <th>Jul</th>
+        <th>Aug</th>
+        <th>Sep</th>
+        <th>Oct</th>
+        <th>Nov</th>
+        <th>Dec</th>
+      </tr>
+      <!-- (visible)="(entry.januaryId !== null) -->
+      <tbody> 
+        <tr class="tablerow-cell" *ngFor="let entry of distancesOverView">
+          <td>{{entry.day === undefined || entry.day  === null ? entry.title : entry.day}}</td>
+          <td>{{entry.january | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.januaryId)" *ngIf="(entry.januaryId != null)">x</button> </td> 
+          <td>{{entry.february | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.februaryId)" *ngIf="(entry.februaryId != null)">x</button></td>
+          <td>{{entry.march | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.marchId)" *ngIf="(entry.marchId != null)">x</button></td>
+          <td>{{entry.april | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.aprilId)" *ngIf="(entry.aprilId != null)">x</button></td>
+          <td>{{entry.may | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.mayId)" *ngIf="(entry.mayId != null)">x</button></td>
+          <td>{{entry.june | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.juneId)" *ngIf="(entry.juneId != null)">x</button></td>
+          <td>{{entry.july | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.julyId)" *ngIf="(entry.julyId != null)">x</button></td>
+          <td>{{entry.august | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.augustId)" *ngIf="(entry.augustId != null)">x</button></td>
+          <td>{{entry.september | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.septemberId)" *ngIf="(entry.septemberId != null)">x</button></td>
+          <td>{{entry.october | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.octoberId)" *ngIf="(entry.octoberId != null)">x</button></td>
+          <td>{{entry.november | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.novemberId)" *ngIf="(entry.novemberId != null)">x</button></td>
+          <td>{{entry.december | number : '0.1-2'}} km <button class="btn btn-danger btn-sm" (click)="deleteDistance(entry.decemberId)" *ngIf="(entry.decemberId != null)">x</button></td>
+        </tr>
+      </tbody>
+      </table>
+  </div>
+
+
+  <div class="row-2">
+      <!-- <div class="row" > -->
+    <table class="table table-bordered one">
+      <tr class="tablerow-headers one">
+        <th>Destination</th>
+        <th>Total Distance</th>
+        <th>Average Per Day To Cover</th>
+        <th>Average Per Week To Cover</th>
+        <th>Average Per Month To Cover</th>
+      </tr>
+      <tbody>
+        <tr class="tablerow-cell">
+         <h1>{{endDestination[0].goal}}</h1> 
+          <td>{{endDestination[0].distanceOfGoal}} km </td>
+          <td>{{averageDailyDistanceEndDestination[0].distance}} km </td>
+          <td> {{averageWeeklyDistanceEndDestination[0].distance}} km </td>
+          <td> {{averageMonthlyDistanceEndDestination[0].distance}} km </td>
+        </tr>
+        </tbody>
+      </table>
+  </div>
+  <div div class="row-3">
+    <app-extra-stats></app-extra-stats>
+  </div>
+ 
+
+ 

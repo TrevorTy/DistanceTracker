@@ -1,0 +1,24 @@
+
+  <table class="table table-bordered one">
+    <tr class="tablerow-headers one">
+      <th>Distance Covered</th>
+      <th>Days Walked</th>
+      <th>Km till Destination</th>
+      <th>Days to go</th>
+    </tr>
+    <tbody>
+      <tr class="tablerow-cell">
+        <td>{{totalWalkedDistance | number : '0.1-2'}} km</td>
+        <td>{{totalWalkedDays}} days</td>
+        <td>{{distanceTillDestination | number : '0.1-2'}} km</td>
+        <td>{{daysLeftOfYear}} days</td>
+      </tr>
+    </tbody>
+    </table>
+
+ 
+ <!-- <h1>Destination : {{endDestination[0].goal}}</h1>
+ 
+      <h2>Distance : {{endDestination[0].distanceOfGoal}} km</h2>
+      
+      <h1>Total Distance : {{ totaldistance}}</h1> -->

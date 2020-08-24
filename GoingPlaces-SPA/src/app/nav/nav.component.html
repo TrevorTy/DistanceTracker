@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/home']">Going Places</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/dailyentry']">Daily Entry</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/graph']">2d Graph</a>
+        </li>
+        <!-- <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/onboarding']">Onboarding</a>
+        </li> -->
+      </ul>
+
+      <div *ngIf="!loggedIn()">
+        <form [formGroup]="loginForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
+          <input class="form-control mr-sm-2" type="text" formControlName="username" 
+          placeholder="Username" >
+          <input class="form-control mr-sm-2" type="password" formControlName="password" 
+          placeholder="Password" >
+          <button class="btn2" type="submit"> Login </button>
+        </form>
+      </div>
+
+      <div *ngIf="loggedIn()" >
+        <!-- background: rgb(214, 214, 214); Logged Button -->
+      <a  (click)="logout()">
+        <button class="btn2" >Logout  </button>
+       </a>
+    </div>
+    
+    
+  </nav>
+
+

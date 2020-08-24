@@ -1,0 +1,178 @@
+
+.h2{
+  color: #000;
+}
+
+.form-group{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.row{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.row-2{
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 40%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.row-3{
+  float: right;
+  margin-top: 20px;
+  margin-right: 125px;
+  width: 40%;
+  overflow-x: auto;
+  /* overflow-y: auto; */
+}
+
+.row-2-cell:hover{
+  background-color: #cae7f0;
+}
+
+
+.tablerow-headers th{
+  border: 5px solid #5bc0de;
+}
+
+.tablerow-cell{
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.tablerow-cell:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.tablerow-cell:hover{
+  background-color: #cae7f0;
+}
+
+
+
+.tablerow-cell th button{
+    
+}
+/* <div class="row">
+    <table>
+      <tr>
+        <th>Dag</th> */
+
+  .row table tr th{
+    padding: 10px;
+    
+  }
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Year header */
+.year {
+  margin-top: 30px;
+  padding: 40px 25px;
+  width: 100%;
+  background: #5bc0de;
+  text-align: center;
+
+}
+
+.year ul li span {
+    font-size: 50;
+}
+
+/* Month list */
+.months ul {
+  margin: 0;
+  padding: 0;
+}
+
+.year ul li {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+/* Previous button inside month header */
+.year .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.year .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.months {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.months li {
+  display: inline-block;
+  /* width: 13.6%; */
+  width: 8%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  /* width: 13.6%; */
+  width: 8%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+.btn2 {
+  min-width: 150px;
+  padding: 15px 10px;
+  margin: 20px;
+  background: rgb(214, 214, 214);
+  border: none;
+  border-radius: 25px;
+  color: rgb(83, 109, 109);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn2:hover {
+  box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
