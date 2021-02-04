@@ -8,18 +8,18 @@ If you want to actually use this project you might have to modify some stuff, be
 It has to be refactored a bit. (Desktop only)
 
 
-The Homepage
+The Homepage with moving parts at the center =)
 
 ![HomePage](https://user-images.githubusercontent.com/25662578/106946847-efd58500-6729-11eb-81dd-7d1d5ba4ff32.png)
 
 
-The upper part of the entry
+Here you can add a walked distance of the day
 
 ![Distance1](https://user-images.githubusercontent.com/25662578/106946938-10054400-672a-11eb-8358-f75197a963d3.png)
 
 
 
-The bottom part of the entry 
+The bottom part of the entry with an overview of all the average distances and more ^^
 
 ![Distance2](https://user-images.githubusercontent.com/25662578/106946985-1a274280-672a-11eb-8816-f5914ea4ed61.png)
 
